@@ -1,3 +1,4 @@
 # firstWebApp
 My first web app 
-1. Tomcat servlets, jsp, pattern MVC
+Tomcat servlets, jsp, pattern MVC
+Task - web app for users functions: add, list, delete
