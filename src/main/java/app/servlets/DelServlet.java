@@ -20,17 +20,17 @@ public class DelServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
-
         Model model = Model.getInstance();
-        String nameDelUser = model.getUserById(id).getName();
 
         boolean isUserDel = model.delete(id);
+
         if (isUserDel) {
-            req.setAttribute("idDel", "User by ID: " + id + " name: " + nameDelUser);
+            req.setAttribute("idDel", "User by ID: " + id);
         } else {
             req.setAttribute("idDel", null);
             req.setAttribute("idNotDel", id);
         }
+
         doGet(req, resp);
     }
 }
